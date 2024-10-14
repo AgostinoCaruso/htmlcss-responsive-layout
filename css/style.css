@@ -8,13 +8,15 @@
     --color-icon-red: #ff0000;
     --color-icon-blue: #005eff;
     /* space */
-    --lit-space:10px;
-    --med-space:20px;
-    --high-space:40px;
+    --lit-space: 10px;
+    --med-space: 20px;
+    --high-space: 40px;
     --general-padding: 20px;
     /* font */
     --low-weight: 300;
+    --med-weight: 600;
     --high-weight: 700;
+    --higher-weight: 800;
 }
 
 * {
@@ -24,13 +26,13 @@
 }
 
 /* ---------------------------------general */
-.debugger {
+/* .debugger {
     border: 1px solid red;
-}
+} */
 
 .nerko-one-regular {
     font-family: "Nerko One", cursive;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-style: normal;
 }
 
@@ -60,18 +62,24 @@ ul {
 }
 
 /* ---------------------------------font */
-.font-high-weight {
-    font-weight: var(--high-weight);
-}
-
 .font-low-weight {
     font-weight: var(--low-weight);
 }
-
+.font-med-weight{
+    font-weight: var(--med-weight);
+}
+.font-high-weight {
+    font-weight: var(--high-weight);
+}
+.font-higher-weight{
+    font-weight: var(--higher-weight);
+}
 .font-up {
     text-transform: uppercase;
 }
-
+.fontsize-mid{
+    font-size: 1.5em;
+}
 /* ---------------------------------color */
 .font-color-grey {
     color: grey;
@@ -80,36 +88,58 @@ ul {
 .font-color-violet {
     color: var(--color-dark-text);
 }
-.font-color-blue{
+
+.font-color-blue {
     color: var(--color-icon-blue);
 }
-.font-color-red{
+
+.font-color-red {
     color: var(--color-icon-red);
 }
+
 /* ---------------------------------paddin */
-.lit-pad-t-b{
+.lit-pad-t-b {
     padding: var(--lit-space) 0px;
 }
-.med-pad-t-b{
-    padding: var(--med-space) 0px;   
+
+.med-pad-t-b {
+    padding: var(--med-space) 0px;
 }
-.lit-pad-b{
+
+.lit-pad-b {
     padding-bottom: var(--lit-space);
 }
+.med-pad-b {
+    padding-bottom: var(--med-space);
+}
+
 /* ---------------------------------margin */
-.lit-marg-t-b{
+.lit-marg-t-b {
     margin: var(--lit-space) 0px;
 }
+.med-marg-t-b {
+    margin: var(--med-space) 0px;
+}
+.med-marg-b {
+    margin-bottom: var(--med-space);
+}
 /* ---------------------------------button */
-.btn-high{
+.btn-high {
     padding: 10px 15px;
     border-radius: 20px;
     background: var(--color-white);
     text-align: center;
 }
+
 /* ---------------------------------border-shadow */
-.border-shadow{
+.border-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.hr{
+    border:none;
+    height: 2px;
+    width: 100px;
+    background-color: var(--color-contrast);
 }
 /* ---------------------------------header */
 header {
@@ -135,51 +165,69 @@ main {
 }
 
 /* ---------------------------------MAIN--videosection */
-.container-panel-img-text {}
+/* .container-panel-img-text {} */
 
-.panel-img {
-    /* width: 60%; */
-    /* height: 200px; */
+/* .panel-img {
+    width: 60%;
+    height: 200px;
+} */
+.video-insert {
+    width:100%;
+    aspect-ratio: 16/9;
 }
-
+.video-insert iframe{
+    height: 100%;
+    width:100%;
+    display: block;
+}
 .panel-text {
     /* width:40%; */
     background: var(--color-white);
-    padding: var(--general-padding);
+    padding: var(--lit-space) var(--high-space);
 }
-.panel-text ul li{
+
+.panel-text ul li {
     padding: 8px 0px;
 }
-.list-recipe{
+
+.list-recipe {
     display: flex;
     flex-flow: column nowrap;
 }
+
 /* ---------------------------------MAIN--social */
-.social{
-    padding: 30px 0px;
+.social {
+    padding: var(--high-space) 0px;
 }
-.social ul{
+
+.social ul {
     display: flex;
     justify-content: space-between;
 }
+
 /* ---------------------------------presentation */
-/* .img-title-presentation::after{
-    border-bottom: var(--color-contrast);
-} */
-.img-presentation{
-    width: 70%;
-    margin:0 auto;
+.img-title-presentation{
+    font-size: 1.9em;
+    font-weight: 500;
 }
-.presentation p{
+.img-presentation {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.presentation p {
+    font-size: 1.2em;
     font-weight: 500;
     line-height: 1.5em;
 }
+
 /* ---------------------------------footer */
 footer {
     background-color: var(--color-primary);
     padding: 20px;
     color: var(--color-white);
-    font-size: .9em;
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
 footer>div {
@@ -191,6 +239,7 @@ footer>div {
 .footer-container {
     display: flex;
     flex-flow: column nowrap;
+    gap: 30px;
 }
 
 .footer-left {
@@ -198,6 +247,7 @@ footer>div {
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+    gap:10px
 }
 
 .footer-right {
@@ -205,8 +255,8 @@ footer>div {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    gap: 20px;
 }
-
 /* ---------------------------------media-query */
 
 /* ---------------------------------mobile */
