@@ -9,6 +9,8 @@
     --color-icon-blue: #005eff;
     /* space */
     --lit-space:10px;
+    --med-space:20px;
+    --high-space:40px;
     --general-padding: 20px;
     /* font */
     --low-weight: 300;
@@ -88,6 +90,9 @@ ul {
 .lit-pad-t-b{
     padding: var(--lit-space) 0px;
 }
+.med-pad-t-b{
+    padding: var(--med-space) 0px;   
+}
 .lit-pad-b{
     padding-bottom: var(--lit-space);
 }
@@ -145,6 +150,10 @@ main {
 .panel-text ul li{
     padding: 8px 0px;
 }
+.list-recipe{
+    display: flex;
+    flex-flow: column nowrap;
+}
 /* ---------------------------------MAIN--social */
 .social{
     padding: 30px 0px;
@@ -152,6 +161,18 @@ main {
 .social ul{
     display: flex;
     justify-content: space-between;
+}
+/* ---------------------------------presentation */
+/* .img-title-presentation::after{
+    border-bottom: var(--color-contrast);
+} */
+.img-presentation{
+    width: 70%;
+    margin:0 auto;
+}
+.presentation p{
+    font-weight: 500;
+    line-height: 1.5em;
 }
 /* ---------------------------------footer */
 footer {
