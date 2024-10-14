@@ -1,6 +1,6 @@
 :root {
     --color-white: #ffffff;
-    --color-bg-color: #d9d9d9;
+    --color-bg-color: #F6F5F3;
     --color-primary: #7c69a4;
     --color-dark-text: #4e3969;
     --color-black: #282529;
@@ -56,11 +56,19 @@ img {
 a {
     color: inherit;
 }
-
+.a-no-under{
+    text-decoration: none;
+}
 ul {
     list-style: none;
 }
-
+/* ONLY-MEDIA */
+.no-mobile{
+    display: none;
+}
+.only-desktop{
+    display: none;
+}
 /* ---------------------------------font */
 .font-low-weight {
     font-weight: var(--low-weight);
@@ -96,7 +104,9 @@ ul {
 .font-color-red {
     color: var(--color-icon-red);
 }
-
+.font-color-black{
+    color:var(--color-black);
+}
 /* ---------------------------------paddin */
 .lit-pad-t-b {
     padding: var(--lit-space) 0px;
@@ -165,12 +175,6 @@ main {
 }
 
 /* ---------------------------------MAIN--videosection */
-/* .container-panel-img-text {} */
-
-/* .panel-img {
-    width: 60%;
-    height: 200px;
-} */
 .video-insert {
     width:100%;
     aspect-ratio: 16/9;
@@ -194,7 +198,9 @@ main {
     display: flex;
     flex-flow: column nowrap;
 }
-
+.video-section > .no-mobile{
+    margin-top: 100px;
+}
 /* ---------------------------------MAIN--social */
 .social {
     padding: var(--high-space) 0px;
@@ -211,7 +217,8 @@ main {
     font-weight: 500;
 }
 .img-presentation {
-    width: 60%;
+    width: 300px;
+    height: 250px;
     margin: 0 auto;
 }
 
@@ -267,6 +274,21 @@ footer>div {
     header>div {
         justify-content: flex-start;
     }
+    .no-mobile{
+        display: inline-block;
+    }
+    .btn-high{
+        padding: 10px 55px;
+    }
+    .list-recipe{
+        flex-flow: row wrap;
+        column-gap: 80px;
+    }
+    .img-presentation{
+        float:left;
+        padding-right: 10px;
+        padding-top: 25px;
+    }
 }
 
 /* ---------------------------------desktop */
@@ -283,4 +305,22 @@ footer>div {
     footer .footer-left {
         align-items: flex-start;
     }
+    .only-desktop{
+        display: inline-block;
+    }
+    .video-section h2{
+        font-size: 3.1em;
+    }
+    .container-panel-img-text {
+        display: flex;
+    }
+    .panel-img{
+        width: 70%;
+    }
+    .panel-text{
+        width: 30%;
+    }
+}
+@media screen and (min-width:1200px) {
+
 }
