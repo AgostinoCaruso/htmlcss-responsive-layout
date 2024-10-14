@@ -198,6 +198,9 @@ main {
     display: flex;
     flex-flow: column nowrap;
 }
+.list-recipe li{
+    letter-spacing: .5px;
+}
 .video-section > .no-mobile{
     margin-top: 100px;
 }
@@ -218,14 +221,18 @@ main {
 }
 .img-presentation {
     width: 300px;
-    height: 250px;
     margin: 0 auto;
 }
-
+.img-presentation::after{
+    content: '';
+    clear: both;
+    display: table;
+}
 .presentation p {
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 1em;
+    font-weight: 400;
     line-height: 1.5em;
+    letter-spacing: 1px;
 }
 
 /* ---------------------------------footer */
@@ -233,7 +240,7 @@ footer {
     background-color: var(--color-primary);
     padding: 20px;
     color: var(--color-white);
-    font-size: 1.1em;
+    font-size: .9em;
     font-weight: 400;
 }
 
@@ -265,9 +272,21 @@ footer>div {
     gap: 20px;
 }
 /* ---------------------------------media-query */
+/* ---------------------------------micro */
+@media screen and (min-width:480px) {
 
+}
 /* ---------------------------------mobile */
-@media screen and (min-width:576px) {}
+@media screen and (min-width:576px) {
+    .btn-high{
+        padding: 10px 30px;
+    }
+    .img-presentation{
+        padding-top: 25px;
+        padding-right: 15px;
+        float: left;
+    }
+}
 
 /* ---------------------------------tablet */
 @media screen and (min-width:768px) {
@@ -278,7 +297,7 @@ footer>div {
         display: inline-block;
     }
     .btn-high{
-        padding: 10px 55px;
+        padding: 10px 40px;
     }
     .list-recipe{
         flex-flow: row wrap;
@@ -288,6 +307,9 @@ footer>div {
         float:left;
         padding-right: 10px;
         padding-top: 25px;
+    }
+    h1{
+        font-size: 4em;
     }
 }
 
@@ -320,7 +342,12 @@ footer>div {
     .panel-text{
         width: 30%;
     }
+    .btn-high{
+        padding: 10px 30px;
+    }
 }
 @media screen and (min-width:1200px) {
-
+    .btn-high{
+        padding: 10px 55px;
+    }
 }
