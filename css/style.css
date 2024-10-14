@@ -7,20 +7,186 @@
     --color-contrast: #fa961a;
     --color-icon-red: #ea5556;
     --color-icon-blue: #2871f0;
+    /* space */
+    --lit-space:10px;
+    --general-padding: 20px;
+    /* font */
+    --low-weight: 300;
+    --high-weight: 700;
 }
 
-/* general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------general */
+.debugger {
+    border: 1px solid red;
+}
+
 .nerko-one-regular {
     font-family: "Nerko One", cursive;
     font-weight: 400;
     font-style: normal;
 }
-body{
+
+body {
     font-family: Montserrat, 'Helvetica Neue', sans-serif;
 }
-h1{
-    color:var(--color-contrast);
+
+h1 {
+    color: var(--color-contrast);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     font-family: "Nerko One", cursive;
     text-transform: uppercase;
+    font-size: 3.5em;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------------------------------font */
+.font-high-weight {
+    font-weight: var(--high-weight);
+}
+
+.font-low-weight {
+    font-weight: var(--low-weight);
+}
+
+.font-up {
+    text-transform: uppercase;
+}
+
+/* ---------------------------------color */
+.font-color-grey {
+    color: grey;
+}
+
+.font-color-violet {
+    color: var(--color-dark-text);
+}
+
+/* ---------------------------------paddin */
+.lit-pad-t-b{
+    padding: var(--lit-space) 0px;
+}
+.lit-pad-b{
+    padding-bottom: var(--lit-space);
+}
+/* ---------------------------------margin */
+.lit-marg-t-b{
+    margin: var(--lit-space) 0px;
+}
+/* ---------------------------------header */
+header {
+    background-color: var(--color-white);
+    padding: var(--general-padding);
+}
+
+header>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------main */
+main {
+    background-color: var(--color-bg-color);
+}
+
+.container-content {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------MAIN--videosection */
+.container-panel-img-text {}
+
+.panel-img {
+    /* width: 60%; */
+    /* height: 200px; */
+}
+
+.panel-text {
+    /* width:40%; */
+    background: var(--color-white);
+    padding: var(--general-padding);
+}
+.panel-text ul li{
+    padding: 8px 0px;
+}
+
+/* ---------------------------------footer */
+footer {
+    background-color: var(--color-primary);
+    padding: 20px;
+    color: var(--color-white);
+    font-size: .9em;
+}
+
+footer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+/* ---------------------------------media-query */
+
+/* ---------------------------------mobile */
+@media screen and (min-width:576px) {}
+
+/* ---------------------------------tablet */
+@media screen and (min-width:768px) {
+    header>div {
+        justify-content: flex-start;
+    }
+}
+
+/* ---------------------------------desktop */
+@media screen and (min-width:992px) {
+    footer {
+        font-size: 1em;
+    }
+
+    footer .footer-container {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    footer .footer-left {
+        align-items: flex-start;
+    }
 }
